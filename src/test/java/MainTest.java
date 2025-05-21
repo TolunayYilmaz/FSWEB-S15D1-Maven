@@ -133,7 +133,7 @@ public class MainTest {
     @Test
     public void testRemoveContact()  {
         Contact contact = new Contact("Test", "12345678");
-        mobilePhone.addNewContact(new Contact("Test", "12345678"));
+        mobilePhone.addNewContact(contact);
 
         assertEquals(mobilePhone.removeContact(contact), true);
         assertEquals(mobilePhone.getMyContacts().size(),3);
@@ -143,7 +143,7 @@ public class MainTest {
     @Test
     public void testFindContact()  {
         Contact contact = new Contact("Test", "12345678");
-        mobilePhone.addNewContact(new Contact("Test", "12345678"));
+        mobilePhone.addNewContact(contact);
 
         assertEquals(mobilePhone.findContact(contact), 3);
     }
@@ -152,7 +152,7 @@ public class MainTest {
     @Test
     public void testFindContactString()  {
         Contact contact = new Contact("Test", "12345678");
-        mobilePhone.addNewContact(new Contact("Test", "12345678"));
+        mobilePhone.addNewContact(contact);
 
         assertEquals(mobilePhone.findContact(contact.getName()), 3);
     }
@@ -161,7 +161,7 @@ public class MainTest {
     @Test
     public void testQueryContactString()  {
         Contact contact = new Contact("Test", "12345678");
-        mobilePhone.addNewContact(new Contact("Test", "12345678"));
+        mobilePhone.addNewContact(contact);
 
         assertEquals(mobilePhone.queryContact(contact.getName()), contact);
     }
